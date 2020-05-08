@@ -3,12 +3,12 @@ This repo contains use-at-your-own-risk samples on using UWP 6.2.X builds in var
 
 Note that .NET Native has two special configurations that are controlled with the Application Minimum version in the app config. 
 App Min Ver settings:
--<= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.7.  Supports x86/x64/arm32.
-->= RS3 (16299)-  Debug Configuration uses .NET Core 2.0, Release Congiruation uses .NET Native 2.2.  Supports x86/x64/arm32/arm64. Note that we only support .NET native on ARM64. 
+- <= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.7.  Supports x86/x64/arm32.
+- \>= RS3 (16299)-  Debug Configuration uses .NET Core 2.0, Release Congiruation uses .NET Native 2.2.  Supports x86/x64/arm32/arm64. Note that we only support .NET native on ARM64. 
 
 A C++ or Javascript UWP app hosting a C# WinMD is a special case.  In that scenario, app min config works as follows:
--<= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.4.  Supports x86/x64/arm32.
-->= RS3 (16299)-  Not a currently supported configuration.
+- <= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.4.  Supports x86/x64/arm32.
+- \>= RS3 (16299)-  Not a currently supported configuration.
 
 This repo is intended to provide samples for not-so-common .NET Native scenarios:
 - **ManagedNativeInterop**: This is a C# UWP -> C++ WinMD sample demonstrating a C# app hosting a C++ component.  The sample supports app min ver <= RS2 (.Net Core 1.1/.NET native 1.7) as well as min ver >= RS3 (.NET core 2.0/.NET native 2.2). Supports x86/x64/arm32/arm64.  
