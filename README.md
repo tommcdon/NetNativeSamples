@@ -7,7 +7,7 @@ This repo is intended to provide samples for not-so-common .NET Native scenarios
 - **CPP-CSharp-V2**: This is another C++/JS UWP -> C# WinMD sample but with App Min Ver targeting RS3, and therefore runs against .NET Core 2.0 (debug mode) / .NET Native 2.2 (relase mode). Supports x86/x64/arm32/arm64.
 - **CSTarget11RunCore2**: C# UWP app targeting RS2 and overriding the default .NET Core 1.1 runtime and instead executes against .NET Core 2.0 in Debug scenarios only. Release mode will target .NET native 1.7 (which is the default). Supports x86/x64/arm32.
 
-Note that .NET Native has two special configurations that are controlled with the Application Minimum version in the app config. 
+Note that .NET Native has two special configurations that are controlled with the Application Minimum version in the app config:
 - <= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.7.  Supports x86/x64/arm32.
 - \>= RS3 (16299)-  Debug Configuration uses .NET Core 2.0, Release Congiruation uses .NET Native 2.2.  Supports x86/x64/arm32/arm64. Note that we only support .NET native on ARM64. 
 
