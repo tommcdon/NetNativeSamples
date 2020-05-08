@@ -8,7 +8,6 @@ This repo is intended to provide samples for not-so-common .NET Native scenarios
 - **CSTarget11RunCore2**: C# UWP app targeting RS2 and overriding the default .NET Core 1.1 runtime and instead executes against .NET Core 2.0 in Debug scenarios only. Release mode will target .NET native 1.7 (which is the default). Supports x86/x64/arm32.
 
 Note that .NET Native has two special configurations that are controlled with the Application Minimum version in the app config. 
-App Min Ver settings:
 - <= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.7.  Supports x86/x64/arm32.
 - \>= RS3 (16299)-  Debug Configuration uses .NET Core 2.0, Release Congiruation uses .NET Native 2.2.  Supports x86/x64/arm32/arm64. Note that we only support .NET native on ARM64. 
 
