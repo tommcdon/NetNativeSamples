@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+*.dll
+
+# VS internal files
+**/.vs
+*.csproj.user
+
+# build generated files
+**/Generated Files
+**/Debug
+**/Release
+**/obj
+**/bin

@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{6DAC8F67-63FD-4628-8602-EB0291929280}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSTarget11RunCore2</RootNamespace>
+    <AssemblyName>CSTarget11RunCore2</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+    <!-- Start Custom .NET Native properties -->
+    <NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
+    <!-- NugetPath>$(UserProfile)\.nuget\packages</NugetPath -->
+    <UWPCoreRuntimeSdkVersion>2.2.10</UWPCoreRuntimeSdkVersion>
+    <!-- End Custom .NET Native properties -->
+  </PropertyGroup>
+  <!-- Start Custom .NET Native imports  -->
+  <!-- Import CoreCLR 2.x props at the beginning of the project -->
+  <Import Project="$(NugetPath)\Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\Microsoft.Net.UWPCoreRuntimeSdk.props" />
+  <Import Project="$(NugetPath)\runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props" />
+  <Import Project="$(NugetPath)\runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props" />
+  <Import Project="$(NugetPath)\runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props" />
+  <!-- End Custom .NET Native imports -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <!-- UseDotNetNativeToolchain>true</UseDotNetNativeToolchain -->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- Start Custom .NET Core 2.x imports and targets -->
+  <Import Project="$(NugetPath)\runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets" />
+  <Import Project="$(NugetPath)\runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets" />
+  <Import Project="$(NugetPath)\runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets" />
+  <Target Name="InjectV2CoreClrFiles"
+          AfterTargets="RemoveV1CoreClrFiles">
+    <GetReferenceAssemblyPaths TargetFrameworkMoniker="$(NuGetTargetFrameworkMonikerToInject)">
+      <Output TaskParameter="ReferenceAssemblyPaths" ItemName="_NuGetInjectionSourceDirectories" />
+    </GetReferenceAssemblyPaths>
+
+    <PropertyGroup>
+      <FrameworkInjectionLockFile>@(_NuGetInjectionSourceDirectories->'%(Identity)\RS3.project.lock.json')</FrameworkInjectionLockFile>
+      <FrameworkInjectionPackagesDirectory>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\NuGet\Repository', 'UWPNugetPackages', null, RegistryView.Registry32, RegistryView.Default))</FrameworkInjectionPackagesDirectory>
+      <NuGetTargetMonikerToInject>UAP,Version=v10.0.15138</NuGetTargetMonikerToInject>
+    </PropertyGroup>
+
+    <ResolveNuGetPackageAssets Condition="Exists('$(FrameworkInjectionLockFile)')"
+                               NuGetPackagesDirectory="$(FrameworkInjectionPackagesDirectory)"
+                               RuntimeIdentifier="$(NuGetRuntimeIdentifier)"
+                               TargetMonikers="$(NuGetTargetMonikerToInject)"
+                               ProjectLockFile="$(FrameworkInjectionLockFile)">
+      <Output TaskParameter="ResolvedCopyLocalItems" ItemName="_InjectNetCoreFrameworkPayload" />
+    </ResolveNuGetPackageAssets>
+
+    <ItemGroup>
+      <PackagingOutputs Include="@(_InjectNetCoreFrameworkPayload)" Condition="'$(UseDotNetNativeToolchain)' != 'true'">
+        <TargetPath>%(Filename)%(Extension)</TargetPath>
+        <ProjectName>$(ProjectName)</ProjectName>
+        <OutputGroup>CopyLocalFilesOutputGroup</OutputGroup>
+      </PackagingOutputs>
+    </ItemGroup>
+  </Target>
+
+<!-- FilterCoreFrameworkPayloadFromNuGet BeforeTargets-->
+  <Target Name="RemoveV1CoreClrFiles" 
+          BeforeTargets="FilterCoreFrameworkPayloadFromNuGet;RuntimeImplementationProjectOutputGroup" 
+          AfterTargets="ResolveReferences" 
+          DependsOnTargets="ResolveNuGetPackageAssets" 
+          Condition="'$(ResolveNuGetPackages)' == 'true' 
+                      AND '$(_TargetsCoreRuntime)' == 'true' 
+                      AND '$(TargetPlatformMinVersion)' &lt; '10.0.16299.0'
+                      AND '$(UseDotNetNativeToolchain)' != 'true'">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths 
+       Remove="@(ReferenceCopyLocalPaths)" 
+       Condition="$([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('clrcompression.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('clrjit.dll')) OR 
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('Microsoft.CSharp.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('Microsoft.VisualBasic.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('Microsoft.Win32.Primitives.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.AppContext.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Buffers.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Collections.Concurrent.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Collections.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Collections.Immutable.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Collections.NonGeneric.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Collections.Specialized.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ComponentModel.Annotations.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ComponentModel.DataAnnotations.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ComponentModel.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ComponentModel.EventBasedAsync.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Core.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Data.Common.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Diagnostics.Contracts.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Diagnostics.Debug.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Diagnostics.DiagnosticSource.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Diagnostics.StackTrace.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Diagnostics.Tools.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Diagnostics.Tracing.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Dynamic.Runtime.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Globalization.Calendars.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Globalization.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Globalization.Extensions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.IO.Compression.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.IO.Compression.ZipFile.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.IO.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.IO.FileSystem.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.IO.FileSystem.Primitives.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.IO.IsolatedStorage.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.IO.UnmanagedMemoryStream.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Linq.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Linq.Expressions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Linq.Parallel.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Linq.Queryable.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.Http.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.Http.Rtc.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.NameResolution.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.NetworkInformation.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.Primitives.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.Requests.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.Sockets.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.WebHeaderCollection.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.WebSockets.Client.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Net.WebSockets.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Numerics.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Numerics.Vectors.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Numerics.Vectors.WindowsRuntime.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ObjectModel.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Private.DataContractSerialization.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Private.ServiceModel.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Private.Uri.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.Context.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.DispatchProxy.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.Emit.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.Emit.ILGeneration.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.Emit.Lightweight.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.Extensions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.Metadata.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.Primitives.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Reflection.TypeExtensions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Resources.ResourceManager.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.Extensions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.Handles.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.InteropServices.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.InteropServices.WindowsRuntime.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.Numerics.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.Serialization.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.Serialization.Json.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.Serialization.Primitives.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.Serialization.Xml.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.WindowsRuntime.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Runtime.WindowsRuntime.UI.Xaml.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Security.Claims.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Security.Cryptography.Algorithms.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Security.Cryptography.Cng.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Security.Cryptography.Encoding.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Security.Cryptography.Primitives.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Security.Cryptography.X509Certificates.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Security.Principal.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ServiceModel.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ServiceModel.Duplex.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ServiceModel.Http.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ServiceModel.NetTcp.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ServiceModel.Primitives.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ServiceModel.Security.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.ServiceModel.Web.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Text.Encoding.CodePages.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Text.Encoding.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Text.Encoding.Extensions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Text.RegularExpressions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Threading.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Threading.Overlapped.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Threading.Tasks.Dataflow.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Threading.Tasks.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Threading.Tasks.Extensions.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Threading.Tasks.Parallel.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Threading.Timer.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Windows.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Xml.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Xml.Linq.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Xml.ReaderWriter.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Xml.Serialization.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Xml.XDocument.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Xml.XmlDocument.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('System.Xml.XmlSerializer.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('Microsoft.CSharp.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('Microsoft.VisualBasic.dll')) OR
+       $([System.String]::new('%(ReferenceCopyLocalPaths.Identity)').EndsWith('Microsoft.Win32.Primitives.dll'))" />
+    </ItemGroup>
+  </Target>
+  <!-- End Custom .NET Native imports and targets -->
+
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
