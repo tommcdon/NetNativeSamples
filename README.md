@@ -9,7 +9,7 @@ This repo is intended to provide samples for not-so-common .NET Native scenarios
 
 Note that .NET Native has two special configurations that are controlled with the Application Minimum version in the app config:
 - <= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.7.  Supports x86/x64/arm32.
-- \>= RS3 (16299)-  Debug Configuration uses .NET Core 2.0, Release Congiruation uses .NET Native 2.2.  Supports x86/x64/arm32/arm64. Note that we only support .NET native on ARM64. 
+- \>= RS3 (16299)-  Debug Configuration uses .NET Core 2.0, Release Congiruation uses .NET Native 2.2.  Supports x86/x64/arm32/arm64. .NET native is used for both Debug and Release configurations on ARM64. 
 
 A C++ or Javascript UWP app hosting a C# WinMD is a special case.  In that scenario, app min config works as follows:
 - <= RS2 (15063) - Debug Configuration uses .NET Core 1.1, Release Congiruation uses .NET Native 1.4.  Supports x86/x64/arm32.
