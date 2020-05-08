@@ -15,8 +15,8 @@
     <DotNetNativeVersion>2.2.8-rel-28605-00</DotNetNativeVersion>
     <DotNetNativeSharedLibary>2.2.7-rel-28605-00</DotNetNativeSharedLibary>
     <UWPCoreRuntimeSdkVersion>2.2.10</UWPCoreRuntimeSdkVersion>
-    <NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath>
-    <!--<NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>-->
+    <!-- NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath -->
+    <NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
     <!-- End Custom .NET Native properties -->
   </PropertyGroup>
   <!-- Start Custom .NET Native targets -->
