@@ -42,3 +42,7 @@
 **/Release
 **/obj
 **/bin
+
+# Msbuild artifacts
+*.binlog
+*.log
