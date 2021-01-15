@@ -19,9 +19,9 @@
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
     <!-- Start Custom .NET Native properties -->
-    <NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath>
-    <!--<NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>-->
-    <UWPCoreRuntimeSdkVersion>2.2.10</UWPCoreRuntimeSdkVersion>
+    <!-- <NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath> -->
+    <NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
+    <UWPCoreRuntimeSdkVersion>2.2.11</UWPCoreRuntimeSdkVersion>
     <!-- End Custom .NET Native properties -->
   </PropertyGroup>
   <!-- Start Custom .NET Native imports  -->
@@ -164,7 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.10</Version>
+      <Version>6.2.11</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
