@@ -53,3 +53,5 @@
 # App Packages
 **/AppPackages
 **/BundleArtifacts
+
+*.user
