@@ -220,4 +220,12 @@
   <Import Condition="'$(WindowsTargetPlatformMinVersion)' &gt;= '10.0.16299.0'" Project="$(NugetPath)\runtime.win10-arm.Microsoft.Net.Native.SharedLibrary\$(DotNetNativeSharedLibary)\build\runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets" />
   <Import Condition="'$(WindowsTargetPlatformMinVersion)' &gt;= '10.0.16299.0'" Project="$(NugetPath)\runtime.win10-arm64.Microsoft.Net.Native.SharedLibrary\$(DotNetNativeSharedLibary)\build\runtime.win10-arm64.Microsoft.Net.Native.SharedLibrary.targets" />
   <!-- End Custom .NET Native targets -->
+
+  <!-- Import App Specific dependencies needed for the WinMD component -->
+  <ItemGroup>
+    <None Include="$(SolutionDir)\nugetDependencies\Newtonsoft.Json.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
 </Project>
