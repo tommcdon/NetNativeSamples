@@ -7,14 +7,14 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.19041.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.16299.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
     <!-- Start Custom .NET Native properties -->
-    <DotNetNativeVersion>2.2.9-rel-29512-01</DotNetNativeVersion>
-    <DotNetNativeSharedLibary>2.2.8-rel-29512-01</DotNetNativeSharedLibary>
-    <UWPCoreRuntimeSdkVersion>2.2.11</UWPCoreRuntimeSdkVersion>
+    <DotNetNativeVersion>2.2.10-rel-29722-00</DotNetNativeVersion>
+    <DotNetNativeSharedLibary>2.2.8-rel-29722-00</DotNetNativeSharedLibary>
+    <UWPCoreRuntimeSdkVersion>2.2.12</UWPCoreRuntimeSdkVersion>
     <!-- <NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath> -->
     <NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
     <!-- End Custom .NET Native properties -->

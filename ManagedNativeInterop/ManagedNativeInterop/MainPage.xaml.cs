@@ -32,6 +32,10 @@ namespace ManagedNativeInterop
             WindowsRuntimeComponent1.Class1 class1 = new WindowsRuntimeComponent1.Class1();
             string foo = class1.GetFoo();
             textBox1.Text += foo + "!";
+
+            int a = 9;
+            int b = 0;
+            int c = a / b;
         }
     }
 }
