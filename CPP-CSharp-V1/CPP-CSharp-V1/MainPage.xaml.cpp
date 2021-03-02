@@ -24,9 +24,6 @@ using namespace Windows::UI::Xaml::Navigation;
 MainPage::MainPage()
 {
 	InitializeComponent();
-	int a = 0;
-	int b = 2;
-	//int c = b / a;
 }
 
 
@@ -35,6 +32,9 @@ void CPP_CSharp_V1::MainPage::Button_Click(Platform::Object^ sender, Windows::UI
 	RuntimeComponent1::Class1^ c = ref new RuntimeComponent1::Class1();
 	Platform::String^ s = c->Foo("bar");
 	textBox1->Text += s;
+	int a = 0;
+	int b = 2;
+	int r = b / a;
 }
 
 
