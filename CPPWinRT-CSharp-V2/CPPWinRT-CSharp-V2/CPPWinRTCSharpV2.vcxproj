@@ -17,9 +17,9 @@
     <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.19041.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.17134.0</WindowsTargetPlatformMinVersion>
     <!-- Start Custom .NET Native properties -->
-    <DotNetNativeVersion>2.2.9-rel-29512-01</DotNetNativeVersion>
-    <DotNetNativeSharedLibary>2.2.8-rel-29512-01</DotNetNativeSharedLibary>
-    <UWPCoreRuntimeSdkVersion>2.2.11</UWPCoreRuntimeSdkVersion>
+    <DotNetNativeVersion>2.2.10-rel-29722-00</DotNetNativeVersion>
+    <DotNetNativeSharedLibary>2.2.8-rel-29722-00</DotNetNativeSharedLibary>
+    <UWPCoreRuntimeSdkVersion>2.2.12</UWPCoreRuntimeSdkVersion>
     <!--<NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath>-->
     <NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
     <!-- End Custom .NET Native properties -->
@@ -197,6 +197,12 @@
       <Project>{2eb5a416-6096-49d0-b708-a6c0738c9aa5}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.targets')" />
@@ -208,8 +214,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.targets'))" />
   </Target>
-  <!-- Start Custom .NET Native targets -->
-  <!-- Add a workaround to make sure the .NET framework libraries are correctly copied to the AppX folder in Debug (CoreCLR) mode -->
+  <!-- Start Custom .NET Native targets --><!--
+  --><!-- Add a workaround to make sure the .NET framework libraries are correctly copied to the AppX folder in Debug (CoreCLR) mode --><!--
   <Target Name="AfterInjectNetCoreFramework" AfterTargets="InjectNetCoreFramework">
     <ItemGroup>
       <PackagingOutputs Include="@(_InjectNetCoreFrameworkPayload)" Condition="'%(_InjectNetCoreFrameworkPayload.NuGetPackageId)' == '$(_CoreRuntimePackageId)' and '$(UseDotNetNativeToolchain)' != 'true'">
@@ -218,7 +224,7 @@
         <OutputGroup>CopyLocalFilesOutputGroup</OutputGroup>
       </PackagingOutputs>
     </ItemGroup>
-  </Target>
+  </Target>-->
   <!-- Import all of the .NET Native / CoreCLR targets at the end of the project -->
   <Import Condition="'$(WindowsTargetPlatformMinVersion)' &gt;= '10.0.16299.0'" Project="$(NugetPath)\runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets" />
   <Import Condition="'$(WindowsTargetPlatformMinVersion)' &gt;= '10.0.16299.0'" Project="$(NugetPath)\runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk\$(UWPCoreRuntimeSdkVersion)\build\runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets" />

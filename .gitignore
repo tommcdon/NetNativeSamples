@@ -46,3 +46,6 @@
 # Msbuild artifacts
 *.binlog
 *.log
+
+# Nuget packages
+**/packages
