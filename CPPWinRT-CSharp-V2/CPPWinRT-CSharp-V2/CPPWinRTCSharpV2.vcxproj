@@ -21,7 +21,7 @@
     <DotNetNativeSharedLibary>2.2.8-rel-29722-00</DotNetNativeSharedLibary>
     <UWPCoreRuntimeSdkVersion>2.2.12</UWPCoreRuntimeSdkVersion>
     <!--<NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath>-->
-    <NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
+    <NugetPath>$(MSBuildProgramFiles32)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
     <!-- End Custom .NET Native properties -->
   </PropertyGroup>
   <!-- Start Custom .NET Native targets -->
@@ -77,7 +77,7 @@
   </ItemGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '16.0'">v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -214,8 +214,11 @@
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.201217.4\build\native\Microsoft.Windows.CppWinRT.targets'))" />
   </Target>
-  <!-- Start Custom .NET Native targets --><!--
-  --><!-- Add a workaround to make sure the .NET framework libraries are correctly copied to the AppX folder in Debug (CoreCLR) mode --><!--
+  <!-- Start Custom .NET Native targets -->
+  <!--
+  -->
+  <!-- Add a workaround to make sure the .NET framework libraries are correctly copied to the AppX folder in Debug (CoreCLR) mode -->
+  <!--
   <Target Name="AfterInjectNetCoreFramework" AfterTargets="InjectNetCoreFramework">
     <ItemGroup>
       <PackagingOutputs Include="@(_InjectNetCoreFrameworkPayload)" Condition="'%(_InjectNetCoreFrameworkPayload.NuGetPackageId)' == '$(_CoreRuntimePackageId)' and '$(UseDotNetNativeToolchain)' != 'true'">

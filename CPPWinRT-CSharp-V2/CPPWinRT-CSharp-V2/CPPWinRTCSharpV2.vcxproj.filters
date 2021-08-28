@@ -53,6 +53,7 @@
   <ItemGroup>
     <None Include="PropertySheet.props" />
     <None Include="packages.config" />
+    <None Include="..\packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
