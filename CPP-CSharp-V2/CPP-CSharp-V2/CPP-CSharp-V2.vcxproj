@@ -12,9 +12,9 @@
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
     <!-- Start Custom .NET Native properties -->
-    <DotNetNativeVersion>2.2.11-rel-30601-02</DotNetNativeVersion>
-    <DotNetNativeSharedLibary>2.2.8-rel-30601-02</DotNetNativeSharedLibary>
-    <UWPCoreRuntimeSdkVersion>2.2.13</UWPCoreRuntimeSdkVersion>
+    <DotNetNativeVersion>2.2.12-rel-31116-00</DotNetNativeVersion>
+    <DotNetNativeSharedLibary>2.2.8-rel-31116-00</DotNetNativeSharedLibary>
+    <UWPCoreRuntimeSdkVersion>2.2.14</UWPCoreRuntimeSdkVersion>
     <!-- <NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath> -->
     <NugetPath>$(MSBuildProgramFiles32)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
     <!-- End Custom .NET Native properties -->
