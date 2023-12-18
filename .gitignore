@@ -49,3 +49,9 @@
 
 # Nuget packages
 **/packages
+
+# App Packages
+**/AppPackages
+**/BundleArtifacts
+
+*.user
