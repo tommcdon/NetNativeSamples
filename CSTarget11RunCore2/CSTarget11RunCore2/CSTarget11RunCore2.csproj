@@ -21,7 +21,7 @@
     <!-- Start Custom .NET Native properties -->
     <!-- <NugetPath>$(USERPROFILE)\.nuget\packages</NugetPath> -->
     <NugetPath>$(ProgramFiles)\Microsoft SDKs\UWPNuGetPackages</NugetPath>
-    <UWPCoreRuntimeSdkVersion>2.2.11</UWPCoreRuntimeSdkVersion>
+    <UWPCoreRuntimeSdkVersion>2.2.14</UWPCoreRuntimeSdkVersion>
     <!-- End Custom .NET Native properties -->
   </PropertyGroup>
   <!-- Start Custom .NET Native imports  -->
